@@ -26,9 +26,9 @@ class _MailboxScreenState extends State<MailboxScreen> {
   }
 
   final List _pages = [
-    // home page
+    // Mail page
     const Mailbox(),
-    // profile page
+    // Meet page
     const Meet(),
   ];
   @override
@@ -115,7 +115,7 @@ class _MailboxScreenState extends State<MailboxScreen> {
             icon: Icon(Icons.message_outlined),
             label: 'Mailbox',
           ),
-          // profile
+          // Meet
           BottomNavigationBarItem(
             icon: Icon(Icons.video_camera_front),
             label: 'Meet',
