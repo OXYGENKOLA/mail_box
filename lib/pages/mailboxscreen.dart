@@ -47,52 +47,54 @@ class _MailboxScreenState extends State<MailboxScreen> {
           ),
         ],
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.black12,
-                image: DecorationImage(
-                  image: AssetImage("images/logo.jpg"),
+      drawer: SafeArea(
+        child: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  image: DecorationImage(
+                    image: AssetImage("images/logo.jpg"),
+                  ),
                 ),
+                child: Text("Mails"),
               ),
-              child: Text("Mails"),
-            ),
-            ListTile(
-              leading: Icon(Icons.inbox),
-              title: const Text('Inbox'),
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MailboxScreen(),
-                    ));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.outbox),
-              title: const Text('Sent'),
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SentMessages(),
-                    ));
-              },
-            ),
-            ListTile(
-                leading: Icon(Icons.logout),
-                title: Text('Logout'),
+              ListTile(
+                leading: Icon(Icons.inbox),
+                title: const Text('Inbox'),
                 onTap: () {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoginPage(),
+                        builder: (context) => const MailboxScreen(),
                       ));
-                }),
-          ],
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.outbox),
+                title: const Text('Sent'),
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SentMessages(),
+                      ));
+                },
+              ),
+              ListTile(
+                  leading: Icon(Icons.logout),
+                  title: Text('Logout'),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginPage(),
+                        ));
+                  }),
+            ],
+          ),
         ),
       ),
       body: _pages[_selectedIndex],

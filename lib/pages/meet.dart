@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Meet extends StatefulWidget {
   const Meet({super.key});
@@ -19,25 +18,25 @@ class _MeetState extends State<Meet> {
             children: [
               Container(
                 height: 40,
-                width: 200,
+                width: 150,
                 decoration: BoxDecoration(
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.only(left: 60.0, top: 10),
+                  padding: EdgeInsets.only(left: 30.0, top: 10),
                   child: Text('New meeting', selectionColor: Colors.white),
                 ),
               ),
               Container(
                 height: 40,
-                width: 200,
+                width: 150,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.only(left: 40.0, top: 10),
+                  padding: EdgeInsets.only(left: 20.0, top: 10),
                   child: Text('Join with a code', selectionColor: Colors.blue),
                 ),
               )
@@ -47,7 +46,7 @@ class _MeetState extends State<Meet> {
             children: [
               SizedBox(
                 height: 590,
-                width: 500,
+                width: 360,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
