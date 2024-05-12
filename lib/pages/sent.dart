@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:mail_box/pages/mailboxscreen.dart';
-import 'package:mail_box/pages/messagetiles.dart';
 
 class SentMessages extends StatefulWidget {
   const SentMessages({super.key});
@@ -79,11 +78,7 @@ class _SentMessagesState extends State<SentMessages> {
       body:ListView.builder(
               itemCount: sentList.length,
               itemBuilder: (context, index) {
-                return MessageTile(
-                  taskName:sentList[index][0],
-                  taskCompleted: sentList[index][1], 
-                  deleteFunction: (context) => deleteTask(index),
-                );
+                return;
               },
             ),
     );
